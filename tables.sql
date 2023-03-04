@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `reborn_faturas` (
   `tipo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idfatura`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3345 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 
