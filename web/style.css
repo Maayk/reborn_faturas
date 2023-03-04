@@ -1,0 +1,160 @@
+@font-face {
+     font-family: "Roboto";
+     src: url( "fonts/Roboto.ttf" );
+ }
+
+input:focus, textarea:focus, button:focus, select:focus{
+     outline: none;
+ }
+
+ input:focus {
+     border-bottom: 1px solid #1759d3 !important;
+ }
+#app {
+     position: relative;
+     top: 45vh;
+     width: 100%;
+     height: 25vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.fechar-fatura{
+     position: relative;
+     left: 42vh;
+     top: 0.8vh;
+     width: 2.3vh;
+     height: 2.3vh;
+     text-align: center;
+     background-color: white;
+     border-radius: 0.5vh;
+     color: #909090;
+     font-size: 1.5vh;
+     transition: all 0.3s !important;
+}
+.inputs-flexivel{
+     display: flex;
+}
+.fechar-fatura:hover{
+     background-color: rgb(236, 46, 46);
+     color: white;
+     transition: all 0.3s !important;
+}
+.x-fechar{
+     position: relative;
+     top: 0.2vh;
+}
+
+.fatura-container{
+     background-color: #000000cc;
+     width: 70vh;
+     height: 16vh;
+     border-radius: 1vh;
+     color: white;
+     -webkit-box-shadow: 5px 5px 26px -3px #262626;
+     box-shadow: 5px 5px 26px -3px #262626;
+}
+.itens-texto{
+     position: relative;
+     font-family: Roboto;
+     font-size: 1.4vh;
+     color: #d8d8d8;
+     width: 13vh;
+     text-align: center;
+     margin-left: 0.5vh;
+     right: 4vh;
+     top: 1vh;
+}
+.fatura-header{
+     position: relative;
+     border-top-left-radius: 0.5vh;
+     border-top-right-radius: 0.5vh;
+     height: 4vh;
+     font-family: Roboto;
+     font-size: 2vh;
+     background-color: #0080FF;
+     display: flex;
+}
+.header-title{
+     position: relative;
+     top: 0.8vh;
+     left: 2vh;
+}
+.description-header{
+     position: relative;
+     font-size: 1.3vh;
+     color: #d6d5d5;
+     top: -0.1vh;
+}
+.botao{
+     width: 7vh !important;
+}
+.botao:hover{
+     background-color: #1484ec !important;
+     color: white !important;
+     transition: all 0.3s !important;
+}
+.container-itens{
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.fatura-inputs{
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     top: 1.5vh;
+     width: 100%;
+}
+.input-fatura{
+     font-size: 1.3vh !important;
+     height: 4vh !important;
+     width: 15vh !important;
+     color: gray;
+     text-align: center;
+     margin-left: 0.5vh !important;
+}
+.input-fatura:hover{
+     background-color: #3a3a3a;
+     transition: all 0.3s;
+     box-shadow: 1px 2px 16px -3px #a9a9a91e;
+}
+.titulo-fatura{
+     border: 0;
+     width: 19vh;
+     background-color: #353535;
+     height: 3vh;
+     border-radius: 0.5vh;
+}
+.botaosubmit{
+     width: 8vh !important;
+     height: 4vh !important;
+     line-height: 4vh !important;
+     left: 1vh;
+     background-color: #4d9de8 !important;
+}
+.resultado-fatura{
+     font-family: Roboto;
+     position: relative;
+     top: 1.55vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.enviando{
+     border: 4px solid #525252; /* Light grey */
+     border-top: 4px solid #3498db; /* Blue */
+     border-radius: 50%;
+     width: 2vh;
+     height: 2vh;
+     animation: spin 2s linear infinite;
+}
+.sucesso{
+     font-size: 1.4vh !important;
+}
+@keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+   }

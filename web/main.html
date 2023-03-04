@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+     <script src="https://cdn.jsdelivr.net/npm/v-mask/dist/v-mask.min.js"></script>
+     <link href="style.css" rel="stylesheet" type="text/css" />
+     <link type="text/css" rel="stylesheet" href="materialize.min.css" media="screen,projection" />
+     <link type="text/css" rel="stylesheet" href="all.min.css">
+     <link type="text/css" rel="stylesheet" href="balloon.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <title>Reborn Faturas</title>
+</head>
+<body>
+     <div id="app" v-bind:style="{ display: aberto }">
+          <div class="fatura-container">
+               <div class="fatura-header">
+                    <span class="header-title">{{ header }} - <span class="description-header"> {{ descricao }}</span></span>
+                    <div id="fecharfatura" class="fechar-fatura"><span class="x-fechar">X</span></div>
+               </div>
+               <div class="container-itens">
+                    <span class="itens-texto">{{digiteid}}</span>
+                    <span class="itens-texto">{{valorfatura}}</span>
+                    <span class="itens-texto">{{titulofatura}}</span>
+               </div>
+               <div class="fatura-inputs">
+                    <form id="test-form" class="inputs-flexivel" v-on:submit.prevent="resetValores">
+                         <input ref="playerId" class="input-fatura" autocomplete="off" @keypress='validar' :placeholder="'' + [[ idex ]]" maxlength="5">
+                         <input ref="valor" class="input-fatura" autocomplete="off"  @keypress='validar' v-model.number="valorFatura" :placeholder="'' + [[ valorex ]]" maxlength="8">
+                         <input ref="titulo" class="input-fatura" autocomplete="off" :placeholder="'' + [[ motivoex ]]" maxlength="20">
+                         <!-- <button class="waves-effect waves-light btn" type="submit" v-on:click="onSubmit">Enviar</button> -->
+                         <a class="waves-effect waves-light btn botaosubmit" v-on:click="onSubmit">Enviar</a>
+                    </form>
+               </div>
+               <div class="resultado-fatura">
+                    <div v-if="enviando" class="enviando"></div>
+                    <div v-else class="sucesso">
+                         {{msgsucesso}}
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="application.js" type="text/javascript"></script>
+     <script>
+
+     </script>
+</body>
+</html>
